@@ -14,7 +14,7 @@ the standard for Node.js callbacks. One unfortunate exception to this is `fs.exi
 The `fs-exist-nodeback` module polyfills `fs.exists` so that it remains backward compatible with the original Node.js callback
 style while simultaneously adding transparent support for nodeback-style callback functions. 
 
-Internal file-system level features or functionality of `fs.exists` are not modified in any way.
+Internal system level features or functionality of `fs.exists` are not modified in any way.
 
 ## Installation
 
@@ -32,6 +32,8 @@ That's it! Now `fs.exists` supports nodeback-style callbacks while still remaini
 
 Nodeback-style is supported:
 ```js
+var fs = require('fs');
+
 fs.exists('./', function (err, exists) {
 	if (err) return console.err(err);
 	console.log('exists: ' + exists);
@@ -40,10 +42,18 @@ fs.exists('./', function (err, exists) {
 
 Node.js original callback style is supported:
 ```js
+var fs = require('fs');
+
 fs.exists('./', function (exists) {
 	console.log('exists: ' + exists);
 });
 ```
+
+## Compatibility
+
+`fs-exists-nodeback` is compatible with Node.js and io.js version `0.8` or newer. 
+
+Travis CI tests are run for all released versions of Node.js.
 
 ## Testing
 
