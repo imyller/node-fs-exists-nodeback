@@ -1,6 +1,6 @@
 {
   "name": "fs-exists-nodeback",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Support Nodeback-style callbacks for fs.exists without breaking backward compatibility",
   "author": "Ilkka Myller <ilkka.myller@nodefield.com>",
   "license": "MIT",
